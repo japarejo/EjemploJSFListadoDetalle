@@ -1,0 +1,38 @@
+<!DOCTYPE html> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <f:view contentType="text/html">
+        <h:head>
+            <title>PrimeFaces Demo</title>
+        </h:head> 
+        <body> 
+            <h2>Listado de Pelis</h2>
+            <h:form>
+            <h:dataTable value="#{pelis.pelis}" var="peli"
+    			styleClass="pelis-table"
+    			headerClass="pelis-table-header"
+    			rowClasses="pelis-table-odd-row,pelis-table-even-row"
+                        >
+                <h:column>                    
+                    <f:facet name="header">Titulo</f:facet>    		
+                    #{peli.titulo}
+                </h:column>
+                <h:column>                   
+                    <f:facet name="header">Año</f:facet>    		
+                    #{peli.anio}
+                </h:column>
+                <h:column>                   
+                    <f:facet name="header">Productora</f:facet>    		
+                    #{peli.director}
+                </h:column>
+                <h:column>                    
+                    <f:facet name="Acciones">Productora</f:facet>    		                    
+                </h:column>
+            </h:dataTable>
+            
+            </h:form>
+        </body> 
+    </f:view>
+</html>
+
