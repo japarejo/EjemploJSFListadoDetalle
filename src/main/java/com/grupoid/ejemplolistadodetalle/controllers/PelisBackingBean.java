@@ -28,7 +28,7 @@ public class PelisBackingBean implements Serializable{
     }
     
     public String crearNuevaPeli(){
-        peliculaActual=new Pelicula("", "", new Date().getYear());
+        peliculaActual=new Pelicula("", "", 1900+new Date().getYear());
         repositorioPelis.add(peliculaActual);
         return "editarPelicula.xhtml";
     }

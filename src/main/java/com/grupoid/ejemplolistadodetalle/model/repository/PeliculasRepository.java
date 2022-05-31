@@ -7,16 +7,21 @@ package com.grupoid.ejemplolistadodetalle.model.repository;
 
 
 import com.grupoid.ejemplolistadodetalle.model.domain.Pelicula;
+
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
-import javax.inject.Named;
 
 @ManagedBean(name = "peliculasRepository", eager = true)
 @SessionScoped
-public class PeliculasRepository {
-    private List<Pelicula> peliculas;
+public class PeliculasRepository implements Serializable{
+    /**
+	 * 
+	 */
+	private static final long serialVersionUID = 6942592110385505545L;
+	private List<Pelicula> peliculas;
     
     public PeliculasRepository()
     {
@@ -69,4 +74,5 @@ public class PeliculasRepository {
         }
         return result;
     } 
+    
 }
